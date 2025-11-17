@@ -1,37 +1,246 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-  </style>
-</head>
-<body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
-      <a href="#about">關於我</a>
-      <a href="#projects">作品集</a>
-      <a href="https://example.com/blog">技術部落格</a>
-      <a href="mailto:me@example.com">聯絡我</a>
-    </nav>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加菲 · 前端工程師 | Frontend Developer Portfolio</title>
+    <meta
+      name="description"
+      content="加菲的個人品牌網站，展示前端開發技能、專案作品集，以及提供專業的網頁開發服務。歡迎瀏覽我的技術背景與聯絡方式。"
+    />
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
-  </footer>
-</body>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Noto Sans TC", Arial, sans-serif;
+        line-height: 1.6;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .container {
+        width: 1920px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      nav a {
+        margin-right: 12px;
+        text-decoration: none;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+      .col-12 {
+        grid-column: span 12;
+      }
+      @media (min-width: 768px) {
+        .col-md-6 {
+          grid-column: span 6;
+        }
+      }
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <nav class="nav">
+          <a href="#hero" class="nav-brand">加菲 · Frontend Dev</a>
+          <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link">首頁</a></li>
+            <li><a href="#about" class="nav-link">關於我</a></li>
+            <li><a href="#skills" class="nav-link">技能</a></li>
+            <li><a href="#projects" class="nav-link">作品集</a></li>
+            <li><a href="#contact" class="nav-link">聯絡我</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- SECTION:HERO-START -->
+        <section id="hero" class="section section-hero">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-title">打造優質的網頁體驗</h1>
+              <p class="hero-subtitle">前端工程師 | Frontend Developer</p>
+              <p class="hero-description">
+                結合設計美學與程式技術，創造直觀、流暢且具有視覺吸引力的使用者介面。專注於現代化網頁開發技術，致力於提供最佳的使用者體驗。
+              </p>
+              <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">瀏覽作品集</a>
+                <a href="#contact" class="btn btn-secondary">聯絡我</a>
+              </div>
+              <p style="margin-top: 3rem; color: #606c76; font-size: 0.9rem">
+                ⚠️ 此為 Hero 區的占位內容。之後會使用 Section SDD 的 Prompt
+                產生正式文案與版面設計，請將新的 section 程式碼整段貼在
+                SECTION:HERO-START 與 SECTION:HERO-END
+                註解中間，完全取代現在這一區。
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION:HERO-END -->
+
+        <!-- SECTION:ABOUT-START -->
+        <section
+          id="about"
+          class="section section-about"
+          aria-labelledby="about-heading"
+        >
+          <div class="container">
+            <h2 id="about-heading" class="section-title">關於我</h2>
+            <div class="about-placeholder">
+              <p><strong>📝 這是 About 區的占位內容</strong></p>
+              <p>此區塊將包含個人背景介紹、職涯經歷、工作理念等內容。</p>
+              <p>
+                未來會使用 Section SDD 的 Prompt
+                產生完整的關於我區塊，包含個人照片、詳細介紹文字、時間軸等元素。
+              </p>
+              <p>
+                ⚠️ <strong>開發者請注意：</strong>之後請將新的 section
+                程式碼整段貼在 SECTION:ABOUT-START 與 SECTION:ABOUT-END
+                註解中間，完全取代現在這一區。
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION:ABOUT-END -->
+
+        <!-- SECTION:SKILLS-START -->
+        <section
+          id="skills"
+          class="section section-skills"
+          aria-labelledby="skills-heading"
+        >
+          <div class="container">
+            <h2 id="skills-heading" class="section-title">技能專長</h2>
+            <div class="skills-placeholder">
+              <p><strong>💻 這是 Skills 區的占位內容</strong></p>
+              <p>此區塊將展示前端技術棧、工具使用能力、專業技能等級等資訊。</p>
+              <p>
+                未來會使用 Section SDD 的 Prompt
+                產生完整的技能展示區塊，可能包含技能標籤、進度條、圖示等視覺化元素。
+              </p>
+              <p>
+                ⚠️ <strong>開發者請注意：</strong>之後請將新的 section
+                程式碼整段貼在 SECTION:SKILLS-START 與 SECTION:SKILLS-END
+                註解中間，完全取代現在這一區。
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION:SKILLS-END -->
+
+        <!-- SECTION:PROJECTS-START -->
+        <section
+          id="projects"
+          class="section section-projects"
+          aria-labelledby="projects-heading"
+        >
+          <div class="container">
+            <h2 id="projects-heading" class="section-title">作品集</h2>
+            <div class="projects-placeholder">
+              <p><strong>🎨 這是 Projects 區的占位內容</strong></p>
+              <p>
+                此區塊將展示個人開發專案、作品集項目，包含專案截圖、技術說明、連結等。
+              </p>
+              <p>
+                未來會使用 Section SDD 的 Prompt
+                產生完整的作品集展示區塊，包含專案卡片、篩選功能、詳細描述等元素。
+              </p>
+              <p>
+                ⚠️ <strong>開發者請注意：</strong>之後請將新的 section
+                程式碼整段貼在 SECTION:PROJECTS-START 與 SECTION:PROJECTS-END
+                註解中間，完全取代現在這一區。
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION:PROJECTS-END -->
+
+        <!-- SECTION:CONTACT-START -->
+        <section
+          id="contact"
+          class="section section-contact"
+          aria-labelledby="contact-heading"
+        >
+          <div class="container">
+            <h2 id="contact-heading" class="section-title">聯絡我</h2>
+            <div class="contact-placeholder">
+              <p><strong>📧 這是 Contact 區的占位內容</strong></p>
+              <p>
+                此區塊將提供聯絡方式，包含 Email、電話、社群媒體連結等資訊。
+              </p>
+              <p>
+                未來會使用 Section SDD 的 Prompt
+                產生完整的聯絡資訊區塊，可能包含聯絡表單、社群圖示、地圖等元素。
+              </p>
+              <p>
+                ⚠️ <strong>開發者請注意：</strong>之後請將新的 section
+                程式碼整段貼在 SECTION:CONTACT-START 與 SECTION:CONTACT-END
+                註解中間，完全取代現在這一區。
+              </p>
+              <p
+                style="
+                  margin-top: 1.5rem;
+                  padding-top: 1.5rem;
+                  border-top: 1px solid rgba(217, 119, 6, 0.3);
+                "
+              >
+                <strong>目前的參考連結範例：</strong><br />
+                Email:
+                <a href="mailto:hello@example.com" style="color: #d97706"
+                  >hello@example.com</a
+                ><br />
+                電話:
+                <a href="tel:+886912345678" style="color: #d97706"
+                  >+886 912-345-678</a
+                ><br />
+                GitHub:
+                <a href="https://github.com/yourname" style="color: #d97706"
+                  >github.com/yourname</a
+                ><br />
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/yourname"
+                  style="color: #d97706"
+                  >linkedin.com/in/yourname</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION:CONTACT-END -->
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-content">
+            <p>&copy; 2025 加菲 · Frontend Developer. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
